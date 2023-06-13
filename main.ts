@@ -15,6 +15,9 @@ basic.forever(function () {
         if (Faenger.isTouching(Ziel)) {
             game.addScore(1)
             Ziel.delete()
+            Ziel = game.createSprite(randint(0, 4), randint(0, 4))
         }
+    } else {
+        game.gameOver()
     }
 })
